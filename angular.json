@@ -18,7 +18,8 @@
           "builder": "@angular/bazel:build",
           "options": {
             "targetLabel": "//src:prodapp",
-            "bazelCommand": "build"
+            "bazelCommand": "build",
+            "aot": true
           }
         },
         "serve": {
