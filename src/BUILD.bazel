@@ -109,6 +109,7 @@ ts_devserver(
     entry_module = "angular_bazel_example/src/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
     index_html = "index.html",
+    port = 4200,
     # These scripts will be included in the JS bundle after require.js
     # They should have only named UMD modules, or require.js will throw.
     scripts = [
