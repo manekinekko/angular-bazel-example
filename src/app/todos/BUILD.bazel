@@ -23,6 +23,8 @@ ng_module(
         "todos.component.html",
         ":todos-styles",
     ],
+    # TODO(manekinekko): FW-1004 Type checking is currently not complete.
+    type_check = False,
     tsconfig = "//src:tsconfig.json",
     deps = NG_FACTORY_ADDED_IMPORTS + [
         "//src/shared/material",
