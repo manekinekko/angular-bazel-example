@@ -51,7 +51,7 @@
         "e2e": "bazel test //e2e:all",
         "test": "bazel test //src/...",
         "benchmark": "ibazel-benchmark-runner //src:devserver src/hello-world/hello-world.component.ts --url=http://localhost:5432",
-        "postinstall": "ngc -p angular-metadata.tsconfig.json && yarn browserify-date-fns",
+        "postinstall": "ngc -p angular-metadata.tsconfig.json && yarn browserify-date-fns && ivy-ngcc",
         "// browserify-date-fns": "for ts_devserver & ts_web_test_suite, create named UMD bundle of date-fns npm package with AMD name 'date-fns' and global name browserifyDateFns",
         "browserify-date-fns": "browserify -p [ named-amd --name date-fns ] node_modules/date-fns/index.js -s browserifyDateFns -o node_modules/date-fns/date-fns.umd.js",
         "bazel:format": "find . -type f \\( -name \"*.bzl\" -or -name WORKSPACE -or -name BUILD -or -name BUILD.bazel \\) ! -path \"*/node_modules/*\" | xargs buildifier -v --warnings=attr-cfg,attr-license,attr-non-empty,attr-output-default,attr-single-file,constant-glob,ctx-actions,ctx-args,depset-iteration,depset-union,dict-concatenation,duplicated-name,filetype,git-repository,http-archive,integer-division,load,load-on-top,native-build,native-package,out-of-order-load,output-group,package-name,package-on-top,positional-args,redefined-variable,repository-name,same-origin-load,string-iteration,unsorted-dict-items,unused-variable",

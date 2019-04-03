@@ -14,6 +14,7 @@ build --symlink_prefix=dist/
 test --test_output=errors
 
 # Use the Angular IVy compiler
+# See https://github.com/angular/angular/blob/master/docs/BAZEL.md#various-flags-used-for-tests
 build --define=compile=aot
 
 # Turn off legacy external runfiles
